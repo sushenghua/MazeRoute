@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-31T03:53:31Z",
+  "git": { "commit": "c9261445c0c60760acd25fc21a95af05890730af", "dirty": false },
+  "host": {
+    "model": "Mac16,10",
+    "cpu": "Apple M4",
+    "cores": 10,
+    "memoryGB": 24,
+    "os": "macOS 26.6.2 (arm64)"
+  },
+  "toolchains": {
+    "node": "v24.14.0",
+    "cxx": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+    "cmake": "cmake version 4.2.3",
+    "espIdf": "v5.5.3",
+    "xtensaGcc": "xtensa-esp-elf-gcc (crosstool-NG esp-14.2.0_20251107) 14.2.0"
+  }
+}

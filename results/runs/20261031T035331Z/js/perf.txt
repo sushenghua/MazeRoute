@@ -1,0 +1,5 @@
+generate (coarse grid only) median 4.0 ms   p95 8.4 ms   max 8.5 ms
+fine build, worst 2ms slice median 3.5 ms   p95 3.9 ms   max 4.3 ms
+fine grid full build       median 80.5 ms   p95 89.1 ms   max 92.7 ms
+addObstacle (validate)     median 5.5 ms   p95 8.6 ms   max 9.9 ms
+fine-grid A* (unsliced)    median 17.8 ms   p95 51.8 ms   max 56.3 ms

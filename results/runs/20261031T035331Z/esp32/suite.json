@@ -1,0 +1,103 @@
+{
+  "sliceMs": 6,
+  "seedsPerScenario": 30,
+  "rows": [
+    {
+      "k": "suiteRow",
+      "scenario": "static d=12",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 13.2
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "static d=22",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 34.5
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "static d=36",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 64.7
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "static d=40",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 98.7
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "4 drops @95px d=36",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 135.2
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "4 drops @45px d=36",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 169.6
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "8 random drops d=30",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 215.2
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "16 random drops d=40",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 311.5
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "SEAL 4 drops @45px d=36",
+      "runs": 30,
+      "arrived": 30,
+      "honestFailed": 0,
+      "fail": 0,
+      "elapsed": 345.9
+    },
+    {
+      "k": "suiteRow",
+      "scenario": "SEAL 16 random d=40",
+      "runs": 30,
+      "arrived": 24,
+      "honestFailed": 6,
+      "fail": 0,
+      "elapsed": 472.6
+    }
+  ],
+  "total": {
+    "k": "suite",
+    "runs": 300,
+    "fail": 0,
+    "seconds": 472.6,
+    "aborted": false
+  }
+}

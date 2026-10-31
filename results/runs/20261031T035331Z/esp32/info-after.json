@@ -1,0 +1,24 @@
+{
+  "k": "info",
+  "chip": "ESP32-S3",
+  "rev": 2,
+  "cores": 2,
+  "mhz": 240,
+  "flash": 16777216,
+  "real": "float",
+  "idf": "v5.5.3-dirty",
+  "compiler": "14.2.0",
+  "frameHz": 60,
+  "budgetMs": {
+    "plan": 6,
+    "build": 6,
+    "drop": 5
+  },
+  "heap": {
+    "intFree": 340187,
+    "intMin": 221499,
+    "psramFree": 7708472,
+    "psramMin": 2031360,
+    "psramTotal": 8388608
+  }
+}

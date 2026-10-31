@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steering on ESP32-S3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Agent steering, computed on an ESP32-S3</h1>
+    <p>The chip plans, steers and collides; this page only draws what it reports over USB.</p>
+    <span id="conn" class="pill off">bridge offline</span>
+  </header>
+  <main>
+    <section>
+      <div class="arena-wrap"><canvas id="arena" width="960" height="640"></canvas><div id="toast" role="status"></div></div>
+      <div class="hint">Click the arena to drop an obstacle; the chip validates it and the agent replans. Timings in the panels are measured on the chip with <code>esp_timer</code>; serialisation and USB transfer are excluded.</div>
+      <div class="cards-row">
+        <div class="card">
+          <h2>On-chip benchmark <button id="btn-bench" class="small">Run (20 worlds)</button></h2>
+          <table id="bench"><thead><tr><th>Operation</th><th>median</th><th>p90</th><th>max</th></tr></thead><tbody><tr><td colspan="4" class="muted">not run yet</td></tr></tbody></table>
+        </div>
+        <div class="card">
+          <h2>On-chip test suite
+            <span><input id="suite-n" type="number" min="1" max="300" value="10"> seeds × 10 scenarios
+            <button id="btn-suite" class="small">Run</button> <button id="btn-stop" class="small">Stop</button></span></h2>
+          <table id="suite"><thead><tr><th>Scenario</th><th>runs</th><th>arrived</th><th>honest FAILED</th><th>fail</th></tr></thead><tbody><tr><td colspan="5" class="muted">not run yet</td></tr></tbody></table>
+          <div id="suite-total" class="muted"></div>
+        </div>
+      </div>
+    </section>
+    <aside>
+      <div class="card">
+        <div class="controls">
+          <button id="btn-generate">Generate</button>
+          <button id="btn-start" class="primary" disabled>Start</button>
+          <button id="btn-reset">Reset</button>
+        </div>
+        <label class="slider">Obstacle density <input id="density" type="range" min="8" max="40" value="30"><b id="density-val">30</b></label>
+        <label class="slider">Work slice / frame <input id="plan-cap" type="range" min="1" max="14" step="1" value="6"><b id="plan-cap-val">6 ms</b></label>
+        <label class="setting"><input id="allow-sealing" type="checkbox"> Allow drops that seal off B</label>
+        <div class="toggles">
+          <label><input id="show-raw" type="checkbox"> raw grid path</label>
+          <label><input id="show-trail" type="checkbox" checked> trail</label>
+        </div>
+      </div>
+      <div class="card">
+        <h2>State machine <span id="state-badge">IDLE</span></h2>
+        <div id="stats"></div>
+      </div>
+      <div class="card">
+        <h2>Chip frame cost (last 240 frames)</h2>
+        <canvas id="budget" width="340" height="90"></canvas>
+        <div class="legend"><span><i style="background:#f472b6"></i>drop validation slice</span><span><i style="background:#f6c453"></i>plan / grid build slice</span><span><i style="background:#4fd1c5"></i>controller tick</span><span><i style="background:#ef4444"></i>16.7 ms</span></div>
+      </div>
+      <div class="card">
+        <h2>Transitions</h2>
+        <ul id="log"></ul>
+      </div>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

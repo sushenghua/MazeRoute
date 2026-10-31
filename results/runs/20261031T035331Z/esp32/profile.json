@@ -1,0 +1,61 @@
+{
+  "k": "profile",
+  "rows": [
+    {
+      "label": "patch (rasterise the new obstacle)",
+      "median": 5.918,
+      "p90": 14.006,
+      "max": 18.729,
+      "n": 100
+    },
+    {
+      "label": "seed B",
+      "median": 4.715,
+      "p90": 21.315,
+      "max": 30.831,
+      "n": 100
+    },
+    {
+      "label": "seed agent",
+      "median": 4.577,
+      "p90": 26.165,
+      "max": 28.082,
+      "n": 100
+    },
+    {
+      "label": "connect (meet in the middle)",
+      "median": 23.921,
+      "p90": 49.634,
+      "max": 169.188,
+      "n": 100
+    },
+    {
+      "label": "AStar::start, fine grid (first)",
+      "median": 70.37,
+      "p90": 70.443,
+      "max": 70.473,
+      "n": 100
+    },
+    {
+      "label": "AStar::start, fine grid (again)",
+      "median": 0.021,
+      "p90": 0.023,
+      "max": 0.027,
+      "n": 100
+    },
+    {
+      "label": "EscapeSearch::start",
+      "median": 29.64,
+      "p90": 29.657,
+      "max": 29.669,
+      "n": 100
+    },
+    {
+      "label": "commitObstacle",
+      "median": 1.912,
+      "p90": 2.377,
+      "max": 3.011,
+      "n": 100
+    }
+  ]
+}

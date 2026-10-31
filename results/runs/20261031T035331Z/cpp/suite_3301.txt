@@ -1,0 +1,14 @@
+static d=12            runs 300  arrived 300  FAIL 0  zeroColl 300  recov 0  replans 0  placed 0 rejected 0  avgT 6.3
+static d=22            runs 300  arrived 300  FAIL 0  zeroColl 299  recov 0  replans 0  placed 0 rejected 0  avgT 6.9
+static d=36            runs 300  arrived 300  FAIL 0  zeroColl 299  recov 0  replans 0  placed 0 rejected 0  avgT 7.8
+static d=40            runs 300  arrived 300  FAIL 0  zeroColl 300  recov 0  replans 0  placed 0 rejected 0  avgT 7.8
+4 drops @95px d=36     runs 300  arrived 300  FAIL 0  zeroColl 259  recov 8  replans 510  placed 504 rejected 32  avgT 9.2
+4 drops @45px d=36     runs 300  arrived 300  FAIL 0  zeroColl 53  recov 28  replans 509  placed 481 rejected 162  avgT 10.8
+8 random drops d=30    runs 300  arrived 300  FAIL 0  zeroColl 112  recov 41  replans 1430  placed 1404 rejected 149  avgT 11.7
+16 random drops d=40   runs 300  arrived 300  FAIL 0  zeroColl 109  recov 18  replans 2272  placed 2265 rejected 588  avgT 12.5
+SEAL 4 drops @45px d=36 runs 300  arrived 243  FAIL 0  zeroColl 61  recov 27  replans 554  placed 527 rejected 95  avgT 9.9
+                       sealed runs 59  arrived anyway 2  honest FAILED 57  seal->FAILED latency median 0.0 s  max 0.1 s
+SEAL 16 random d=40    runs 300  arrived 138  FAIL 0  zeroColl 148  recov 11  replans 1854  placed 1850 rejected 223  avgT 8.2
+                       sealed runs 165  arrived anyway 3  honest FAILED 162  seal->FAILED latency median 0.0 s  max 8.0 s
+
+TOTAL runs 3000  failures 0  (26.7 s)

@@ -1,0 +1,3946 @@
+{
+  "run": "20261031T035331Z",
+  "environment": {
+    "recordedAt": "2026-10-31T03:53:31Z",
+    "git": {
+      "commit": "c9261445c0c60760acd25fc21a95af05890730af",
+      "dirty": false
+    },
+    "host": {
+      "model": "Mac16,10",
+      "cpu": "Apple M4",
+      "cores": 10,
+      "memoryGB": 24,
+      "os": "macOS 26.6.2 (arm64)"
+    },
+    "toolchains": {
+      "node": "v24.14.0",
+      "cxx": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+      "cmake": "cmake version 4.2.3",
+      "espIdf": "v5.5.3",
+      "xtensaGcc": "xtensa-esp-elf-gcc (crosstool-NG esp-14.2.0_20251107) 14.2.0"
+    }
+  },
+  "js": {
+    "suite": {
+      "total": {
+        "runs": 12000,
+        "failures": 0,
+        "seconds": 2017.4,
+        "ranges": [
+          1,
+          301,
+          601,
+          901
+        ]
+      },
+      "scenarios": [
+        {
+          "scenario": "static d=12",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 1199,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 6.3
+        },
+        {
+          "scenario": "static d=22",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 1196,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 6.95
+        },
+        {
+          "scenario": "static d=36",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 1196,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 7.72
+        },
+        {
+          "scenario": "static d=40",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 1194,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 7.75
+        },
+        {
+          "scenario": "4 drops @95px d=36",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 1036,
+          "recov": 67,
+          "replans": 2037,
+          "placed": 1973,
+          "rejected": 168,
+          "meanTimeS": 9.2
+        },
+        {
+          "scenario": "4 drops @45px d=36",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 194,
+          "recov": 78,
+          "replans": 2017,
+          "placed": 1939,
+          "rejected": 576,
+          "meanTimeS": 10.57
+        },
+        {
+          "scenario": "8 random drops d=30",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 485,
+          "recov": 120,
+          "replans": 5660,
+          "placed": 5599,
+          "rejected": 633,
+          "meanTimeS": 11.4
+        },
+        {
+          "scenario": "16 random drops d=40",
+          "runs": 1200,
+          "arrived": 1200,
+          "fail": 0,
+          "zeroColl": 410,
+          "recov": 61,
+          "replans": 9167,
+          "placed": 9138,
+          "rejected": 2276,
+          "meanTimeS": 12.07
+        },
+        {
+          "scenario": "SEAL 4 drops @45px d=36",
+          "runs": 1200,
+          "arrived": 1001,
+          "fail": 0,
+          "zeroColl": 236,
+          "recov": 72,
+          "replans": 2130,
+          "placed": 2058,
+          "rejected": 346,
+          "sealedRuns": 205,
+          "sealedArrivedAnyway": 6,
+          "honestFailed": 199,
+          "sealToFailedMaxS": 8.1,
+          "meanTimeS": 9.68
+        },
+        {
+          "scenario": "SEAL 16 random d=40",
+          "runs": 1200,
+          "arrived": 539,
+          "fail": 0,
+          "zeroColl": 555,
+          "recov": 41,
+          "replans": 7441,
+          "placed": 7424,
+          "rejected": 799,
+          "sealedRuns": 675,
+          "sealedArrivedAnyway": 14,
+          "honestFailed": 661,
+          "sealToFailedMaxS": 6.8,
+          "meanTimeS": 7.85
+        }
+      ],
+      "failures": []
+    },
+    "bench": {
+      "sections": [
+        {
+          "title": "operations (60 worlds, density 36)",
+          "rows": [
+            {
+              "label": "generate (coarse grid)",
+              "median": 4.0498,
+              "p99": 8.6626,
+              "max": 8.6626,
+              "n": 60
+            },
+            {
+              "label": "fine grid full build",
+              "median": 80.369,
+              "p99": 93.5631,
+              "max": 93.5631,
+              "n": 60
+            },
+            {
+              "label": "addObstacle + validation",
+              "median": 5.4347,
+              "p99": 9.4525,
+              "max": 9.9515,
+              "n": 300
+            },
+            {
+              "label": "coarse A* incl. seeding (unsliced)",
+              "median": 0.9375,
+              "p99": 1.8569,
+              "max": 1.8569,
+              "n": 60
+            },
+            {
+              "label": "fine A* incl. seeding (unsliced)",
+              "median": 20.9442,
+              "p99": 58.334,
+              "max": 58.334,
+              "n": 60
+            }
+          ]
+        },
+        {
+          "title": "per-frame cost with app-like 2 ms slices: plan or build slice + tick (100 missions each)",
+          "rows": [
+            {
+              "label": "static d=36",
+              "median": 0.0141,
+              "p99": 3.1092,
+              "max": 4.2304,
+              "n": 43835,
+              "simFramesPerSecond": 4671
+            },
+            {
+              "label": "16 random drops d=40",
+              "median": 0.0323,
+              "p99": 3.0927,
+              "max": 7.4934,
+              "n": 77664,
+              "simFramesPerSecond": 3012
+            }
+          ]
+        }
+      ]
+    },
+    "perf": {
+      "sections": [
+        {
+          "title": "",
+          "rows": [
+            {
+              "label": "generate (coarse grid only)",
+              "median": 4,
+              "p95": 8.4,
+              "max": 8.5
+            },
+            {
+              "label": "fine build, worst 2ms slice",
+              "median": 3.5,
+              "p95": 3.9,
+              "max": 4.3
+            },
+            {
+              "label": "fine grid full build",
+              "median": 80.5,
+              "p95": 89.1,
+              "max": 92.7
+            },
+            {
+              "label": "addObstacle (validate)",
+              "median": 5.5,
+              "p95": 8.6,
+              "max": 9.9
+            },
+            {
+              "label": "fine-grid A* (unsliced)",
+              "median": 17.8,
+              "p95": 51.8,
+              "max": 56.3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "cpp": {
+    "suite": {
+      "total": {
+        "runs": 36000,
+        "failures": 0,
+        "seconds": 319.5,
+        "ranges": [
+          1,
+          301,
+          601,
+          901,
+          1201,
+          1501,
+          1801,
+          2101,
+          2401,
+          2701,
+          3001,
+          3301
+        ]
+      },
+      "scenarios": [
+        {
+          "scenario": "static d=12",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 3597,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 6.32
+        },
+        {
+          "scenario": "static d=22",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 3582,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 6.99
+        },
+        {
+          "scenario": "static d=36",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 3585,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 7.7
+        },
+        {
+          "scenario": "static d=40",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 3581,
+          "recov": 0,
+          "replans": 0,
+          "placed": 0,
+          "rejected": 0,
+          "meanTimeS": 7.79
+        },
+        {
+          "scenario": "4 drops @95px d=36",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 3105,
+          "recov": 179,
+          "replans": 6122,
+          "placed": 5953,
+          "rejected": 470,
+          "meanTimeS": 9.21
+        },
+        {
+          "scenario": "4 drops @45px d=36",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 633,
+          "recov": 264,
+          "replans": 6048,
+          "placed": 5784,
+          "rejected": 1775,
+          "meanTimeS": 10.6
+        },
+        {
+          "scenario": "8 random drops d=30",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 1517,
+          "recov": 387,
+          "replans": 16975,
+          "placed": 16760,
+          "rejected": 1882,
+          "meanTimeS": 11.37
+        },
+        {
+          "scenario": "16 random drops d=40",
+          "runs": 3600,
+          "arrived": 3600,
+          "fail": 0,
+          "zeroColl": 1244,
+          "recov": 179,
+          "replans": 27473,
+          "placed": 27386,
+          "rejected": 6923,
+          "meanTimeS": 12.17
+        },
+        {
+          "scenario": "SEAL 4 drops @45px d=36",
+          "runs": 3600,
+          "arrived": 3015,
+          "fail": 0,
+          "zeroColl": 748,
+          "recov": 255,
+          "replans": 6426,
+          "placed": 6171,
+          "rejected": 1089,
+          "sealedRuns": 606,
+          "sealedArrivedAnyway": 21,
+          "honestFailed": 585,
+          "sealToFailedMaxS": 8,
+          "meanTimeS": 9.73
+        },
+        {
+          "scenario": "SEAL 16 random d=40",
+          "runs": 3600,
+          "arrived": 1593,
+          "fail": 0,
+          "zeroColl": 1685,
+          "recov": 121,
+          "replans": 22354,
+          "placed": 22295,
+          "rejected": 2460,
+          "sealedRuns": 2048,
+          "sealedArrivedAnyway": 41,
+          "honestFailed": 2007,
+          "sealToFailedMaxS": 9.9,
+          "meanTimeS": 7.92
+        }
+      ],
+      "failures": []
+    },
+    "bench": {
+      "sections": [
+        {
+          "title": "operations (60 worlds, density 36)",
+          "rows": [
+            {
+              "label": "generate (coarse grid)",
+              "median": 0.3098,
+              "p99": 0.7388,
+              "max": 0.7388,
+              "n": 60
+            },
+            {
+              "label": "fine grid full build",
+              "median": 3.7108,
+              "p99": 4.2322,
+              "max": 4.2322,
+              "n": 60
+            },
+            {
+              "label": "addObstacle + validation",
+              "median": 0.3362,
+              "p99": 0.6805,
+              "max": 0.7208,
+              "n": 300
+            },
+            {
+              "label": "coarse A* incl. seeding (unsliced)",
+              "median": 0.0875,
+              "p99": 0.185,
+              "max": 0.185,
+              "n": 60
+            },
+            {
+              "label": "fine A* incl. seeding (unsliced)",
+              "median": 2.0607,
+              "p99": 6.6962,
+              "max": 6.6962,
+              "n": 60
+            }
+          ]
+        },
+        {
+          "title": "per-frame cost with app-like 2 ms slices: plan or build slice + tick (100 missions each)",
+          "rows": [
+            {
+              "label": "static d=36",
+              "median": 0.0004,
+              "p99": 0.0032,
+              "max": 2.0828,
+              "n": 43834,
+              "simFramesPerSecond": 99220
+            },
+            {
+              "label": "16 random drops d=40",
+              "median": 0.0009,
+              "p99": 0.1615,
+              "max": 2.077,
+              "n": 71988,
+              "simFramesPerSecond": 52321
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hostFloat": {
+    "bench": {
+      "sections": [
+        {
+          "title": "operations (60 worlds, density 36)",
+          "rows": [
+            {
+              "label": "generate (coarse grid)",
+              "median": 0.259,
+              "p99": 0.8013,
+              "max": 0.8013,
+              "n": 60
+            },
+            {
+              "label": "fine grid full build",
+              "median": 2.2471,
+              "p99": 7.48,
+              "max": 7.48,
+              "n": 60
+            },
+            {
+              "label": "addObstacle + validation",
+              "median": 0.3016,
+              "p99": 1.0078,
+              "max": 1.1024,
+              "n": 300
+            },
+            {
+              "label": "coarse A* incl. seeding (unsliced)",
+              "median": 0.0923,
+              "p99": 0.2143,
+              "max": 0.2143,
+              "n": 60
+            },
+            {
+              "label": "fine A* incl. seeding (unsliced)",
+              "median": 1.9267,
+              "p99": 5.7973,
+              "max": 5.7973,
+              "n": 60
+            }
+          ]
+        },
+        {
+          "title": "per-frame cost with app-like 2 ms slices: plan or build slice + tick (100 missions each)",
+          "rows": [
+            {
+              "label": "static d=36",
+              "median": 0.0003,
+              "p99": 0.0022,
+              "max": 2.0123,
+              "n": 43841,
+              "simFramesPerSecond": 157693
+            },
+            {
+              "label": "16 random drops d=40",
+              "median": 0.0007,
+              "p99": 0.3439,
+              "max": 4.0078,
+              "n": 75307,
+              "simFramesPerSecond": 54200
+            }
+          ]
+        }
+      ]
+    },
+    "suites": {
+      "0.03": {
+        "total": {
+          "runs": 36000,
+          "failures": 0,
+          "seconds": 207.7,
+          "ranges": [
+            1,
+            301,
+            601,
+            901,
+            1201,
+            1501,
+            1801,
+            2101,
+            2401,
+            2701,
+            3001,
+            3301
+          ]
+        },
+        "scenarios": [
+          {
+            "scenario": "static d=12",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3597,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 6.36
+          },
+          {
+            "scenario": "static d=22",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3582,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.07
+          },
+          {
+            "scenario": "static d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3585,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.75
+          },
+          {
+            "scenario": "static d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3581,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.86
+          },
+          {
+            "scenario": "4 drops @95px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3089,
+            "recov": 88,
+            "replans": 5655,
+            "placed": 5571,
+            "rejected": 974,
+            "meanTimeS": 9.45
+          },
+          {
+            "scenario": "4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1484,
+            "recov": 69,
+            "replans": 3270,
+            "placed": 3201,
+            "rejected": 3457,
+            "meanTimeS": 9.15
+          },
+          {
+            "scenario": "8 random drops d=30",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1881,
+            "recov": 145,
+            "replans": 13772,
+            "placed": 14366,
+            "rejected": 4068,
+            "meanTimeS": 11.38
+          },
+          {
+            "scenario": "16 random drops d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1740,
+            "recov": 49,
+            "replans": 20771,
+            "placed": 26593,
+            "rejected": 10356,
+            "meanTimeS": 13.84
+          },
+          {
+            "scenario": "SEAL 4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1509,
+            "recov": 70,
+            "replans": 3253,
+            "placed": 3183,
+            "rejected": 3451,
+            "sealedRuns": 0,
+            "sealedArrivedAnyway": 0,
+            "honestFailed": 0,
+            "sealToFailedMaxS": 0,
+            "meanTimeS": 9.13
+          },
+          {
+            "scenario": "SEAL 16 random d=40",
+            "runs": 3600,
+            "arrived": 3046,
+            "fail": 0,
+            "zeroColl": 1877,
+            "recov": 44,
+            "replans": 20333,
+            "placed": 26785,
+            "rejected": 9111,
+            "sealedRuns": 571,
+            "sealedArrivedAnyway": 17,
+            "honestFailed": 554,
+            "sealToFailedMaxS": 29.6,
+            "meanTimeS": 13.59
+          }
+        ],
+        "failures": []
+      },
+      "0.06": {
+        "total": {
+          "runs": 36000,
+          "failures": 0,
+          "seconds": 239.4,
+          "ranges": [
+            1,
+            301,
+            601,
+            901,
+            1201,
+            1501,
+            1801,
+            2101,
+            2401,
+            2701,
+            3001,
+            3301
+          ]
+        },
+        "scenarios": [
+          {
+            "scenario": "static d=12",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3597,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 6.35
+          },
+          {
+            "scenario": "static d=22",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3582,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.03
+          },
+          {
+            "scenario": "static d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3585,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.72
+          },
+          {
+            "scenario": "static d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3581,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.83
+          },
+          {
+            "scenario": "4 drops @95px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3109,
+            "recov": 96,
+            "replans": 5938,
+            "placed": 5842,
+            "rejected": 684,
+            "meanTimeS": 9.4
+          },
+          {
+            "scenario": "4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1041,
+            "recov": 106,
+            "replans": 4484,
+            "placed": 4378,
+            "rejected": 2595,
+            "meanTimeS": 9.63
+          },
+          {
+            "scenario": "8 random drops d=30",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1749,
+            "recov": 175,
+            "replans": 15730,
+            "placed": 15789,
+            "rejected": 2895,
+            "meanTimeS": 11.5
+          },
+          {
+            "scenario": "16 random drops d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1547,
+            "recov": 81,
+            "replans": 25005,
+            "placed": 27877,
+            "rejected": 8530,
+            "meanTimeS": 13.42
+          },
+          {
+            "scenario": "SEAL 4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3577,
+            "fail": 0,
+            "zeroColl": 1047,
+            "recov": 101,
+            "replans": 4496,
+            "placed": 4395,
+            "rejected": 2608,
+            "sealedRuns": 23,
+            "sealedArrivedAnyway": 0,
+            "honestFailed": 23,
+            "sealToFailedMaxS": 2.3,
+            "meanTimeS": 9.63
+          },
+          {
+            "scenario": "SEAL 16 random d=40",
+            "runs": 3600,
+            "arrived": 2560,
+            "fail": 0,
+            "zeroColl": 1761,
+            "recov": 79,
+            "replans": 23126,
+            "placed": 26469,
+            "rejected": 6345,
+            "sealedRuns": 1076,
+            "sealedArrivedAnyway": 36,
+            "honestFailed": 1040,
+            "sealToFailedMaxS": 20,
+            "meanTimeS": 11.88
+          }
+        ],
+        "failures": []
+      },
+      "0.1": {
+        "total": {
+          "runs": 36000,
+          "failures": 0,
+          "seconds": 250.3,
+          "ranges": [
+            1,
+            301,
+            601,
+            901,
+            1201,
+            1501,
+            1801,
+            2101,
+            2401,
+            2701,
+            3001,
+            3301
+          ]
+        },
+        "scenarios": [
+          {
+            "scenario": "static d=12",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3597,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 6.34
+          },
+          {
+            "scenario": "static d=22",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3582,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.03
+          },
+          {
+            "scenario": "static d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3585,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.72
+          },
+          {
+            "scenario": "static d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3581,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.8
+          },
+          {
+            "scenario": "4 drops @95px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3124,
+            "recov": 106,
+            "replans": 6017,
+            "placed": 5911,
+            "rejected": 577,
+            "meanTimeS": 9.35
+          },
+          {
+            "scenario": "4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 824,
+            "recov": 132,
+            "replans": 5201,
+            "placed": 5069,
+            "rejected": 2212,
+            "meanTimeS": 10.04
+          },
+          {
+            "scenario": "8 random drops d=30",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1669,
+            "recov": 220,
+            "replans": 16354,
+            "placed": 16264,
+            "rejected": 2386,
+            "meanTimeS": 11.42
+          },
+          {
+            "scenario": "16 random drops d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1401,
+            "recov": 84,
+            "replans": 26990,
+            "placed": 27758,
+            "rejected": 7996,
+            "meanTimeS": 13.01
+          },
+          {
+            "scenario": "SEAL 4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3554,
+            "fail": 0,
+            "zeroColl": 818,
+            "recov": 131,
+            "replans": 5272,
+            "placed": 5141,
+            "rejected": 2114,
+            "sealedRuns": 46,
+            "sealedArrivedAnyway": 0,
+            "honestFailed": 46,
+            "sealToFailedMaxS": 1.6,
+            "meanTimeS": 10.02
+          },
+          {
+            "scenario": "SEAL 16 random d=40",
+            "runs": 3600,
+            "arrived": 2159,
+            "fail": 0,
+            "zeroColl": 1767,
+            "recov": 70,
+            "replans": 23760,
+            "placed": 24700,
+            "rejected": 4916,
+            "sealedRuns": 1495,
+            "sealedArrivedAnyway": 54,
+            "honestFailed": 1441,
+            "sealToFailedMaxS": 12.2,
+            "meanTimeS": 10.31
+          }
+        ],
+        "failures": []
+      },
+      "unsliced": {
+        "total": {
+          "runs": 36000,
+          "failures": 0,
+          "seconds": 262.4,
+          "ranges": [
+            1,
+            301,
+            601,
+            901,
+            1201,
+            1501,
+            1801,
+            2101,
+            2401,
+            2701,
+            3001,
+            3301
+          ]
+        },
+        "scenarios": [
+          {
+            "scenario": "static d=12",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3597,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 6.34
+          },
+          {
+            "scenario": "static d=22",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3582,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7
+          },
+          {
+            "scenario": "static d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3585,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.71
+          },
+          {
+            "scenario": "static d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3581,
+            "recov": 0,
+            "replans": 0,
+            "placed": 0,
+            "rejected": 0,
+            "meanTimeS": 7.8
+          },
+          {
+            "scenario": "4 drops @95px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 3067,
+            "recov": 248,
+            "replans": 6229,
+            "placed": 5981,
+            "rejected": 479,
+            "meanTimeS": 9.28
+          },
+          {
+            "scenario": "4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 614,
+            "recov": 240,
+            "replans": 6110,
+            "placed": 5870,
+            "rejected": 1773,
+            "meanTimeS": 10.63
+          },
+          {
+            "scenario": "8 random drops d=30",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1465,
+            "recov": 486,
+            "replans": 16990,
+            "placed": 16690,
+            "rejected": 1862,
+            "meanTimeS": 11.38
+          },
+          {
+            "scenario": "16 random drops d=40",
+            "runs": 3600,
+            "arrived": 3600,
+            "fail": 0,
+            "zeroColl": 1215,
+            "recov": 221,
+            "replans": 27651,
+            "placed": 27512,
+            "rejected": 6886,
+            "meanTimeS": 12.2
+          },
+          {
+            "scenario": "SEAL 4 drops @45px d=36",
+            "runs": 3600,
+            "arrived": 3022,
+            "fail": 0,
+            "zeroColl": 736,
+            "recov": 233,
+            "replans": 6460,
+            "placed": 6227,
+            "rejected": 1093,
+            "sealedRuns": 600,
+            "sealedArrivedAnyway": 22,
+            "honestFailed": 578,
+            "sealToFailedMaxS": 8,
+            "meanTimeS": 9.72
+          },
+          {
+            "scenario": "SEAL 16 random d=40",
+            "runs": 3600,
+            "arrived": 1587,
+            "fail": 0,
+            "zeroColl": 1681,
+            "recov": 141,
+            "replans": 22502,
+            "placed": 22422,
+            "rejected": 2478,
+            "sealedRuns": 2061,
+            "sealedArrivedAnyway": 48,
+            "honestFailed": 2013,
+            "sealToFailedMaxS": 11,
+            "meanTimeS": 7.93
+          }
+        ],
+        "failures": []
+      }
+    }
+  },
+  "esp32": {
+    "info": {
+      "k": "info",
+      "chip": "ESP32-S3",
+      "rev": 2,
+      "cores": 2,
+      "mhz": 240,
+      "flash": 16777216,
+      "real": "float",
+      "idf": "v5.5.3-dirty",
+      "compiler": "14.2.0",
+      "frameHz": 60,
+      "budgetMs": {
+        "plan": 6,
+        "build": 6,
+        "drop": 5
+      },
+      "heap": {
+        "intFree": 340463,
+        "intMin": 331407,
+        "psramFree": 8331068,
+        "psramMin": 8331068,
+        "psramTotal": 8388608
+      }
+    },
+    "bench": {
+      "k": "bench",
+      "rows": [
+        {
+          "label": "generate + coarse grid",
+          "median": 54.237,
+          "p90": 113.476,
+          "max": 119.962,
+          "n": 20
+        },
+        {
+          "label": "fine grid full build",
+          "median": 885.665,
+          "p90": 956.917,
+          "max": 1006.058,
+          "n": 20
+        },
+        {
+          "label": "drop validation (all slices)",
+          "median": 50.923,
+          "p90": 71.259,
+          "max": 213.109,
+          "n": 100
+        },
+        {
+          "label": "coarse A* (unsliced)",
+          "median": 7.319,
+          "p90": 15.734,
+          "max": 17.013,
+          "n": 20
+        },
+        {
+          "label": "fine A* (unsliced)",
+          "median": 192.186,
+          "p90": 391.971,
+          "max": 407.941,
+          "n": 20
+        },
+        {
+          "label": "fine seedCells (start + goal)",
+          "median": 14.614,
+          "p90": 31.282,
+          "max": 34.848,
+          "n": 20
+        },
+        {
+          "label": "smooth fine path",
+          "median": 2.219,
+          "p90": 4.85,
+          "max": 4.908,
+          "n": 20
+        }
+      ],
+      "heap": {
+        "intFree": 337875,
+        "intMin": 265099,
+        "psramFree": 8331068,
+        "psramMin": 5652260,
+        "psramTotal": 8388608
+      }
+    },
+    "profile": {
+      "k": "profile",
+      "rows": [
+        {
+          "label": "patch (rasterise the new obstacle)",
+          "median": 5.918,
+          "p90": 14.006,
+          "max": 18.729,
+          "n": 100
+        },
+        {
+          "label": "seed B",
+          "median": 4.715,
+          "p90": 21.315,
+          "max": 30.831,
+          "n": 100
+        },
+        {
+          "label": "seed agent",
+          "median": 4.577,
+          "p90": 26.165,
+          "max": 28.082,
+          "n": 100
+        },
+        {
+          "label": "connect (meet in the middle)",
+          "median": 23.921,
+          "p90": 49.634,
+          "max": 169.188,
+          "n": 100
+        },
+        {
+          "label": "AStar::start, fine grid (first)",
+          "median": 70.37,
+          "p90": 70.443,
+          "max": 70.473,
+          "n": 100
+        },
+        {
+          "label": "AStar::start, fine grid (again)",
+          "median": 0.021,
+          "p90": 0.023,
+          "max": 0.027,
+          "n": 100
+        },
+        {
+          "label": "EscapeSearch::start",
+          "median": 29.64,
+          "p90": 29.657,
+          "max": 29.669,
+          "n": 100
+        },
+        {
+          "label": "commitObstacle",
+          "median": 1.912,
+          "p90": 2.377,
+          "max": 3.011,
+          "n": 100
+        }
+      ]
+    },
+    "suite": {
+      "sliceMs": 6,
+      "seedsPerScenario": 30,
+      "rows": [
+        {
+          "k": "suiteRow",
+          "scenario": "static d=12",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 13.2
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "static d=22",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 34.5
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "static d=36",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 64.7
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "static d=40",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 98.7
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "4 drops @95px d=36",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 135.2
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "4 drops @45px d=36",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 169.6
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "8 random drops d=30",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 215.2
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "16 random drops d=40",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 311.5
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "SEAL 4 drops @45px d=36",
+          "runs": 30,
+          "arrived": 30,
+          "honestFailed": 0,
+          "fail": 0,
+          "elapsed": 345.9
+        },
+        {
+          "k": "suiteRow",
+          "scenario": "SEAL 16 random d=40",
+          "runs": 30,
+          "arrived": 24,
+          "honestFailed": 6,
+          "fail": 0,
+          "elapsed": 472.6
+        }
+      ],
+      "total": {
+        "k": "suite",
+        "runs": 300,
+        "fail": 0,
+        "seconds": 472.6,
+        "aborted": false
+      }
+    },
+    "realtime": [
+      {
+        "id": "static-201",
+        "seed": 201,
+        "density": 36,
+        "drops": [],
+        "genMs": 46.88,
+        "polygons": 36,
+        "start": [
+          845,
+          95
+        ],
+        "goal": [
+          415,
+          615
+        ],
+        "dropResults": [],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1333 nodes in 2 slices"
+          },
+          {
+            "t": 8.57,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 8.6 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1333,
+            "slices": 2,
+            "planMs": 7.94,
+            "points": 9
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 8.57,
+          "frames": 514,
+          "overBudget": 0,
+          "worstFrame": 10.098,
+          "avgFrame": 1.913,
+          "worstPlan": 9.496,
+          "worstTick": 1.395,
+          "replans": 0,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 323015,
+            "intMin": 259399,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "static-202",
+        "seed": 202,
+        "density": 36,
+        "drops": [],
+        "genMs": 53.39,
+        "polygons": 36,
+        "start": [
+          945,
+          305
+        ],
+        "goal": [
+          125,
+          305
+        ],
+        "dropResults": [],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.03,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1296 nodes in 2 slices"
+          },
+          {
+            "t": 8.43,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 8.4 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1296,
+            "slices": 2,
+            "planMs": 8.34,
+            "points": 8
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 8.43,
+          "frames": 506,
+          "overBudget": 0,
+          "worstFrame": 11.236,
+          "avgFrame": 2.257,
+          "worstPlan": 10.927,
+          "worstTick": 1.528,
+          "replans": 0,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 322631,
+            "intMin": 259399,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "static-203",
+        "seed": 203,
+        "density": 36,
+        "drops": [],
+        "genMs": 57.82,
+        "polygons": 36,
+        "start": [
+          275,
+          15
+        ],
+        "goal": [
+          625,
+          625
+        ],
+        "dropResults": [],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 469 nodes in 1 slice"
+          },
+          {
+            "t": 7.97,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 8.0 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 469,
+            "slices": 1,
+            "planMs": 2.97,
+            "points": 6
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 7.97,
+          "frames": 478,
+          "overBudget": 0,
+          "worstFrame": 10.696,
+          "avgFrame": 2.086,
+          "worstPlan": 10.036,
+          "worstTick": 1.21,
+          "replans": 0,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 323691,
+            "intMin": 259399,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "static-204",
+        "seed": 204,
+        "density": 36,
+        "drops": [],
+        "genMs": 54.49,
+        "polygons": 36,
+        "start": [
+          865,
+          495
+        ],
+        "goal": [
+          85,
+          585
+        ],
+        "dropResults": [],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 735 nodes in 1 slice"
+          },
+          {
+            "t": 7.05,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 7.1 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 735,
+            "slices": 1,
+            "planMs": 4.81,
+            "points": 7
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 7.05,
+          "frames": 423,
+          "overBudget": 0,
+          "worstFrame": 10.709,
+          "avgFrame": 2.422,
+          "worstPlan": 10.384,
+          "worstTick": 1.119,
+          "replans": 0,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 323139,
+            "intMin": 259399,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-101",
+        "seed": 101,
+        "density": 30,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 45
+          },
+          {
+            "at": 2.2,
+            "dist": 45
+          },
+          {
+            "at": 3.4,
+            "dist": 45
+          },
+          {
+            "at": 4.6,
+            "dist": 45
+          },
+          {
+            "at": 5.8,
+            "dist": 45
+          }
+        ],
+        "genMs": 37.42,
+        "polygons": 30,
+        "start": [
+          935,
+          25
+        ],
+        "goal": [
+          545,
+          565
+        ],
+        "dropResults": [
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 54.61,
+            "slices": 5,
+            "frames": 5,
+            "atT": 1.083
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 45.04,
+            "slices": 5,
+            "frames": 5,
+            "atT": 2.283
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 33.94,
+            "slices": 4,
+            "frames": 4,
+            "atT": 3.467
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 37.56,
+            "slices": 4,
+            "frames": 4,
+            "atT": 4.667
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 33.67,
+            "slices": 4,
+            "frames": 4,
+            "atT": 5.867
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 614 nodes in 1 slice"
+          },
+          {
+            "t": 1.08,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 1.1,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 589 nodes in 1 slice"
+          },
+          {
+            "t": 4.67,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.67,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 281 nodes in 1 slice"
+          },
+          {
+            "t": 9.68,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 9.7 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 614,
+            "slices": 1,
+            "planMs": 3.9,
+            "points": 5
+          },
+          {
+            "tier": 0,
+            "nodes": 589,
+            "slices": 1,
+            "planMs": 3.55,
+            "points": 6
+          },
+          {
+            "tier": 0,
+            "nodes": 281,
+            "slices": 1,
+            "planMs": 1.54,
+            "points": 6
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 9.68,
+          "frames": 581,
+          "overBudget": 0,
+          "worstFrame": 12.264,
+          "avgFrame": 1.778,
+          "worstPlan": 9.526,
+          "worstTick": 1.629,
+          "replans": 2,
+          "recov": 0,
+          "coll": 73,
+          "heap": {
+            "intFree": 287631,
+            "intMin": 259399,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-102",
+        "seed": 102,
+        "density": 40,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 70
+          },
+          {
+            "at": 2.2,
+            "dist": 70
+          },
+          {
+            "at": 3.4,
+            "dist": 70
+          },
+          {
+            "at": 4.6,
+            "dist": 70
+          },
+          {
+            "at": 5.8,
+            "dist": 70
+          }
+        ],
+        "genMs": 56.22,
+        "polygons": 40,
+        "start": [
+          135,
+          525
+        ],
+        "goal": [
+          895,
+          505
+        ],
+        "dropResults": [
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 26.6,
+            "slices": 3,
+            "frames": 3,
+            "atT": 2.25
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 158.68,
+            "slices": 15,
+            "frames": 15,
+            "atT": 3.65
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 40.03,
+            "slices": 4,
+            "frames": 4,
+            "atT": 4.667
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 26.01,
+            "slices": 3,
+            "frames": 3,
+            "atT": 5.85
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 640 nodes in 1 slice"
+          },
+          {
+            "t": 2.25,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.25,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 2.5,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 8327 nodes in 13 slices"
+          },
+          {
+            "t": 4.67,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.68,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 211 nodes in 1 slice"
+          },
+          {
+            "t": 5.85,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 5.85,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 162 nodes in 1 slice"
+          },
+          {
+            "t": 8.88,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 8.9 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 640,
+            "slices": 1,
+            "planMs": 3.83,
+            "points": 10
+          },
+          {
+            "tier": 1,
+            "nodes": 8327,
+            "slices": 13,
+            "planMs": 70.93,
+            "points": 55
+          },
+          {
+            "tier": 0,
+            "nodes": 211,
+            "slices": 1,
+            "planMs": 1.28,
+            "points": 7
+          },
+          {
+            "tier": 0,
+            "nodes": 162,
+            "slices": 1,
+            "planMs": 0.93,
+            "points": 8
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 8.88,
+          "frames": 533,
+          "overBudget": 0,
+          "worstFrame": 13.046,
+          "avgFrame": 2.861,
+          "worstPlan": 9.627,
+          "worstTick": 1.599,
+          "replans": 3,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 255135,
+            "intMin": 250271,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-103",
+        "seed": 103,
+        "density": 30,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 95
+          },
+          {
+            "at": 2.2,
+            "dist": 95
+          },
+          {
+            "at": 3.4,
+            "dist": 95
+          },
+          {
+            "at": 4.6,
+            "dist": 95
+          },
+          {
+            "at": 5.8,
+            "dist": 95
+          }
+        ],
+        "genMs": 67.51,
+        "polygons": 30,
+        "start": [
+          935,
+          495
+        ],
+        "goal": [
+          165,
+          625
+        ],
+        "dropResults": [
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 139.45,
+            "slices": 21,
+            "frames": 21,
+            "atT": 1.35
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 63.49,
+            "slices": 6,
+            "frames": 6,
+            "atT": 2.3
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 33.87,
+            "slices": 3,
+            "frames": 3,
+            "atT": 3.45
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 19.84,
+            "slices": 2,
+            "frames": 2,
+            "atT": 4.633
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 348 nodes in 1 slice"
+          },
+          {
+            "t": 1.35,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 1.35,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 375 nodes in 1 slice"
+          },
+          {
+            "t": 2.3,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.32,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 346 nodes in 2 slices"
+          },
+          {
+            "t": 3.45,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 3.47,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 156 nodes in 1 slice"
+          },
+          {
+            "t": 4.63,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.63,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 86 nodes in 1 slice"
+          },
+          {
+            "t": 7.15,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 7.2 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 348,
+            "slices": 1,
+            "planMs": 1.97,
+            "points": 5
+          },
+          {
+            "tier": 0,
+            "nodes": 375,
+            "slices": 1,
+            "planMs": 2.13,
+            "points": 3
+          },
+          {
+            "tier": 0,
+            "nodes": 346,
+            "slices": 2,
+            "planMs": 1.97,
+            "points": 3
+          },
+          {
+            "tier": 0,
+            "nodes": 156,
+            "slices": 1,
+            "planMs": 0.92,
+            "points": 4
+          },
+          {
+            "tier": 0,
+            "nodes": 86,
+            "slices": 1,
+            "planMs": 0.49,
+            "points": 3
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 7.15,
+          "frames": 429,
+          "overBudget": 0,
+          "worstFrame": 12.557,
+          "avgFrame": 2.409,
+          "worstPlan": 11.92,
+          "worstTick": 1.285,
+          "replans": 4,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 270639,
+            "intMin": 237675,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-104",
+        "seed": 104,
+        "density": 40,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 45
+          },
+          {
+            "at": 2.2,
+            "dist": 45
+          },
+          {
+            "at": 3.4,
+            "dist": 45
+          },
+          {
+            "at": 4.6,
+            "dist": 45
+          },
+          {
+            "at": 5.8,
+            "dist": 45
+          }
+        ],
+        "genMs": 48.19,
+        "polygons": 40,
+        "start": [
+          15,
+          545
+        ],
+        "goal": [
+          585,
+          65
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 6.68,
+            "slices": 2,
+            "frames": 2,
+            "atT": 1.033
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 90.19,
+            "slices": 9,
+            "frames": 9,
+            "atT": 3.55
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 79.07,
+            "slices": 8,
+            "frames": 8,
+            "atT": 4.733
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 45.19,
+            "slices": 5,
+            "frames": 5,
+            "atT": 5.883
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.03,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1801 nodes in 3 slices"
+          },
+          {
+            "t": 8.73,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 8.7 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1801,
+            "slices": 3,
+            "planMs": 11.39,
+            "points": 7
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 8.73,
+          "frames": 524,
+          "overBudget": 0,
+          "worstFrame": 12.292,
+          "avgFrame": 2.214,
+          "worstPlan": 9.394,
+          "worstTick": 1.44,
+          "replans": 0,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 270263,
+            "intMin": 237675,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-105",
+        "seed": 105,
+        "density": 30,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 70
+          },
+          {
+            "at": 2.2,
+            "dist": 70
+          },
+          {
+            "at": 3.4,
+            "dist": 70
+          },
+          {
+            "at": 4.6,
+            "dist": 70
+          },
+          {
+            "at": 5.8,
+            "dist": 70
+          }
+        ],
+        "genMs": 44.38,
+        "polygons": 30,
+        "start": [
+          875,
+          565
+        ],
+        "goal": [
+          65,
+          455
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 39.09,
+            "slices": 8,
+            "frames": 8,
+            "atT": 1.133
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 65.74,
+            "slices": 6,
+            "frames": 6,
+            "atT": 2.3
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 36.48,
+            "slices": 4,
+            "frames": 4,
+            "atT": 3.467
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 100.23,
+            "slices": 9,
+            "frames": 9,
+            "atT": 4.75
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 95.39,
+            "slices": 11,
+            "frames": 11,
+            "atT": 5.983
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.03,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1825 nodes in 3 slices"
+          },
+          {
+            "t": 2.3,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.35,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1862 nodes in 3 slices"
+          },
+          {
+            "t": 3.47,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 3.5,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1467 nodes in 2 slices"
+          },
+          {
+            "t": 4.75,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.78,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 5.88,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 45224 nodes in 63 slices"
+          },
+          {
+            "t": 5.98,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 6.02,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 7.12,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 45224 nodes in 63 slices"
+          },
+          {
+            "t": 20.82,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 20.8 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1825,
+            "slices": 3,
+            "planMs": 11.02,
+            "points": 9
+          },
+          {
+            "tier": 0,
+            "nodes": 1862,
+            "slices": 3,
+            "planMs": 11.67,
+            "points": 10
+          },
+          {
+            "tier": 0,
+            "nodes": 1467,
+            "slices": 2,
+            "planMs": 9.13,
+            "points": 9
+          },
+          {
+            "tier": 1,
+            "nodes": 45224,
+            "slices": 63,
+            "planMs": 382.09,
+            "points": 69
+          },
+          {
+            "tier": 1,
+            "nodes": 45224,
+            "slices": 63,
+            "planMs": 381.67,
+            "points": 69
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 20.82,
+          "frames": 1249,
+          "overBudget": 0,
+          "worstFrame": 14.834,
+          "avgFrame": 2.181,
+          "worstPlan": 8.89,
+          "worstTick": 2.516,
+          "replans": 4,
+          "recov": 0,
+          "coll": 8,
+          "heap": {
+            "intFree": 250931,
+            "intMin": 231747,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-106",
+        "seed": 106,
+        "density": 40,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 95
+          },
+          {
+            "at": 2.2,
+            "dist": 95
+          },
+          {
+            "at": 3.4,
+            "dist": 95
+          },
+          {
+            "at": 4.6,
+            "dist": 95
+          },
+          {
+            "at": 5.8,
+            "dist": 95
+          }
+        ],
+        "genMs": 58.71,
+        "polygons": 40,
+        "start": [
+          665,
+          615
+        ],
+        "goal": [
+          155,
+          225
+        ],
+        "dropResults": [
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 92.04,
+            "slices": 9,
+            "frames": 9,
+            "atT": 2.35
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 51.31,
+            "slices": 5,
+            "frames": 5,
+            "atT": 4.683
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 30.6,
+            "slices": 3,
+            "frames": 3,
+            "atT": 5.85
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 917 nodes in 2 slices"
+          },
+          {
+            "t": 2.35,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.37,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 2.93,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 17200 nodes in 30 slices"
+          },
+          {
+            "t": 4.68,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.7,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 598 nodes in 2 slices"
+          },
+          {
+            "t": 5.85,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 5.87,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 347 nodes in 2 slices"
+          },
+          {
+            "t": 9.08,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 9.1 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 917,
+            "slices": 2,
+            "planMs": 5.65,
+            "points": 8
+          },
+          {
+            "tier": 1,
+            "nodes": 17200,
+            "slices": 30,
+            "planMs": 180.09,
+            "points": 26
+          },
+          {
+            "tier": 0,
+            "nodes": 598,
+            "slices": 2,
+            "planMs": 3.67,
+            "points": 5
+          },
+          {
+            "tier": 0,
+            "nodes": 347,
+            "slices": 2,
+            "planMs": 2.24,
+            "points": 4
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 9.08,
+          "frames": 545,
+          "overBudget": 0,
+          "worstFrame": 12.165,
+          "avgFrame": 2.926,
+          "worstPlan": 11.644,
+          "worstTick": 1.898,
+          "replans": 3,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 256859,
+            "intMin": 231747,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-107",
+        "seed": 107,
+        "density": 30,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 45
+          },
+          {
+            "at": 2.2,
+            "dist": 45
+          },
+          {
+            "at": 3.4,
+            "dist": 45
+          },
+          {
+            "at": 4.6,
+            "dist": 45
+          },
+          {
+            "at": 5.8,
+            "dist": 45
+          }
+        ],
+        "genMs": 117.71,
+        "polygons": 28,
+        "start": [
+          775,
+          615
+        ],
+        "goal": [
+          125,
+          625
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 31.14,
+            "slices": 6,
+            "frames": 6,
+            "atT": 1.1
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 54.25,
+            "slices": 5,
+            "frames": 5,
+            "atT": 2.283
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 45.1,
+            "slices": 5,
+            "frames": 5,
+            "atT": 3.483
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 56.81,
+            "slices": 6,
+            "frames": 6,
+            "atT": 4.7
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 22.4,
+            "slices": 3,
+            "frames": 3,
+            "atT": 5.85
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 186 nodes in 1 slice"
+          },
+          {
+            "t": 2.28,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.3,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 484 nodes in 2 slices"
+          },
+          {
+            "t": 10.07,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 10.1 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 186,
+            "slices": 1,
+            "planMs": 1.24,
+            "points": 2
+          },
+          {
+            "tier": 0,
+            "nodes": 484,
+            "slices": 2,
+            "planMs": 2.61,
+            "points": 9
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 10.07,
+          "frames": 604,
+          "overBudget": 0,
+          "worstFrame": 12.712,
+          "avgFrame": 1.872,
+          "worstPlan": 9.297,
+          "worstTick": 1.534,
+          "replans": 1,
+          "recov": 0,
+          "coll": 85,
+          "heap": {
+            "intFree": 272035,
+            "intMin": 231747,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-108",
+        "seed": 108,
+        "density": 40,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 70
+          },
+          {
+            "at": 2.2,
+            "dist": 70
+          },
+          {
+            "at": 3.4,
+            "dist": 70
+          },
+          {
+            "at": 4.6,
+            "dist": 70
+          },
+          {
+            "at": 5.8,
+            "dist": 70
+          }
+        ],
+        "genMs": 140.58,
+        "polygons": 38,
+        "start": [
+          835,
+          25
+        ],
+        "goal": [
+          15,
+          365
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 88.62,
+            "slices": 16,
+            "frames": 16,
+            "atT": 1.267
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 78.99,
+            "slices": 7,
+            "frames": 7,
+            "atT": 2.317
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 159.01,
+            "slices": 15,
+            "frames": 15,
+            "atT": 3.65
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 251.08,
+            "slices": 23,
+            "frames": 23,
+            "atT": 4.983
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 41.44,
+            "slices": 4,
+            "frames": 4,
+            "atT": 5.867
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.03,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1626 nodes in 2 slices"
+          },
+          {
+            "t": 2.32,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.37,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1597 nodes in 2 slices"
+          },
+          {
+            "t": 5.87,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 5.88,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 758 nodes in 2 slices"
+          },
+          {
+            "t": 14.27,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 14.3 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1626,
+            "slices": 2,
+            "planMs": 9.7,
+            "points": 12
+          },
+          {
+            "tier": 0,
+            "nodes": 1597,
+            "slices": 2,
+            "planMs": 9.66,
+            "points": 12
+          },
+          {
+            "tier": 0,
+            "nodes": 758,
+            "slices": 2,
+            "planMs": 4.66,
+            "points": 10
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 14.27,
+          "frames": 856,
+          "overBudget": 0,
+          "worstFrame": 12.981,
+          "avgFrame": 2.17,
+          "worstPlan": 8.948,
+          "worstTick": 1.581,
+          "replans": 2,
+          "recov": 0,
+          "coll": 1,
+          "heap": {
+            "intFree": 268747,
+            "intMin": 231747,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-109",
+        "seed": 109,
+        "density": 30,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 95
+          },
+          {
+            "at": 2.2,
+            "dist": 95
+          },
+          {
+            "at": 3.4,
+            "dist": 95
+          },
+          {
+            "at": 4.6,
+            "dist": 95
+          },
+          {
+            "at": 5.8,
+            "dist": 95
+          }
+        ],
+        "genMs": 47.91,
+        "polygons": 30,
+        "start": [
+          75,
+          205
+        ],
+        "goal": [
+          625,
+          575
+        ],
+        "dropResults": [
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 402.98,
+            "slices": 54,
+            "frames": 54,
+            "atT": 1.9
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 51.53,
+            "slices": 5,
+            "frames": 5,
+            "atT": 2.283
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 46.38,
+            "slices": 5,
+            "frames": 5,
+            "atT": 3.483
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 38.9,
+            "slices": 4,
+            "frames": 4,
+            "atT": 4.667
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 48.15,
+            "slices": 5,
+            "frames": 5,
+            "atT": 5.883
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 796 nodes in 2 slices"
+          },
+          {
+            "t": 1.9,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 1.92,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 420 nodes in 1 slice"
+          },
+          {
+            "t": 2.28,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.3,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 299 nodes in 1 slice"
+          },
+          {
+            "t": 3.48,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 3.48,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 207 nodes in 1 slice"
+          },
+          {
+            "t": 4.67,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.68,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 636 nodes in 2 slices"
+          },
+          {
+            "t": 5.88,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 5.9,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 307 nodes in 1 slice"
+          },
+          {
+            "t": 10.1,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 10.1 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 796,
+            "slices": 2,
+            "planMs": 4.9,
+            "points": 8
+          },
+          {
+            "tier": 0,
+            "nodes": 420,
+            "slices": 1,
+            "planMs": 2.7,
+            "points": 6
+          },
+          {
+            "tier": 0,
+            "nodes": 299,
+            "slices": 1,
+            "planMs": 1.85,
+            "points": 5
+          },
+          {
+            "tier": 0,
+            "nodes": 207,
+            "slices": 1,
+            "planMs": 1.31,
+            "points": 5
+          },
+          {
+            "tier": 0,
+            "nodes": 636,
+            "slices": 2,
+            "planMs": 3.79,
+            "points": 5
+          },
+          {
+            "tier": 0,
+            "nodes": 307,
+            "slices": 1,
+            "planMs": 1.83,
+            "points": 5
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 10.1,
+          "frames": 606,
+          "overBudget": 0,
+          "worstFrame": 12.601,
+          "avgFrame": 2.4,
+          "worstPlan": 8.811,
+          "worstTick": 1.829,
+          "replans": 5,
+          "recov": 0,
+          "coll": 1,
+          "heap": {
+            "intFree": 270131,
+            "intMin": 231747,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-110",
+        "seed": 110,
+        "density": 40,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 45
+          },
+          {
+            "at": 2.2,
+            "dist": 45
+          },
+          {
+            "at": 3.4,
+            "dist": 45
+          },
+          {
+            "at": 4.6,
+            "dist": 45
+          },
+          {
+            "at": 5.8,
+            "dist": 45
+          }
+        ],
+        "genMs": 53.75,
+        "polygons": 40,
+        "start": [
+          835,
+          595
+        ],
+        "goal": [
+          265,
+          185
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 39.67,
+            "slices": 6,
+            "frames": 6,
+            "atT": 1.117
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 45.38,
+            "slices": 5,
+            "frames": 5,
+            "atT": 2.283
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 40.41,
+            "slices": 4,
+            "frames": 4,
+            "atT": 3.467
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 26.83,
+            "slices": 3,
+            "frames": 3,
+            "atT": 5.85
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.02,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1183 nodes in 2 slices"
+          },
+          {
+            "t": 3.47,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 3.48,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 3.83,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 13677 nodes in 19 slices"
+          },
+          {
+            "t": 5.85,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 5.85,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 164 nodes in 1 slice"
+          },
+          {
+            "t": 11.2,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 11.2 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1183,
+            "slices": 2,
+            "planMs": 6.46,
+            "points": 6
+          },
+          {
+            "tier": 1,
+            "nodes": 13677,
+            "slices": 19,
+            "planMs": 108.98,
+            "points": 30
+          },
+          {
+            "tier": 0,
+            "nodes": 164,
+            "slices": 1,
+            "planMs": 0.97,
+            "points": 5
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 11.2,
+          "frames": 672,
+          "overBudget": 0,
+          "worstFrame": 12.169,
+          "avgFrame": 2.142,
+          "worstPlan": 10.145,
+          "worstTick": 1.349,
+          "replans": 2,
+          "recov": 0,
+          "coll": 71,
+          "heap": {
+            "intFree": 247439,
+            "intMin": 231747,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-111",
+        "seed": 111,
+        "density": 30,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 70
+          },
+          {
+            "at": 2.2,
+            "dist": 70
+          },
+          {
+            "at": 3.4,
+            "dist": 70
+          },
+          {
+            "at": 4.6,
+            "dist": 70
+          },
+          {
+            "at": 5.8,
+            "dist": 70
+          }
+        ],
+        "genMs": 45.76,
+        "polygons": 30,
+        "start": [
+          105,
+          565
+        ],
+        "goal": [
+          835,
+          345
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 77.19,
+            "slices": 11,
+            "frames": 11,
+            "atT": 1.183
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 56.53,
+            "slices": 6,
+            "frames": 6,
+            "atT": 2.3
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 72.35,
+            "slices": 7,
+            "frames": 7,
+            "atT": 3.517
+          },
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 122.89,
+            "slices": 12,
+            "frames": 12,
+            "atT": 4.8
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 54.95,
+            "slices": 5,
+            "frames": 5,
+            "atT": 5.883
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.03,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 2032 nodes in 3 slices"
+          },
+          {
+            "t": 3.52,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 3.55,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1351 nodes in 2 slices"
+          },
+          {
+            "t": 5.88,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 5.9,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 379 nodes in 1 slice"
+          },
+          {
+            "t": 10.43,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 10.4 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 2032,
+            "slices": 3,
+            "planMs": 11.69,
+            "points": 11
+          },
+          {
+            "tier": 0,
+            "nodes": 1351,
+            "slices": 2,
+            "planMs": 8.11,
+            "points": 7
+          },
+          {
+            "tier": 0,
+            "nodes": 379,
+            "slices": 1,
+            "planMs": 2.04,
+            "points": 6
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 10.43,
+          "frames": 626,
+          "overBudget": 0,
+          "worstFrame": 12.357,
+          "avgFrame": 2.174,
+          "worstPlan": 8.888,
+          "worstTick": 1.227,
+          "replans": 2,
+          "recov": 0,
+          "coll": 0,
+          "heap": {
+            "intFree": 263455,
+            "intMin": 229695,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      },
+      {
+        "id": "drops-112",
+        "seed": 112,
+        "density": 40,
+        "drops": [
+          {
+            "at": 1,
+            "dist": 95
+          },
+          {
+            "at": 2.2,
+            "dist": 95
+          },
+          {
+            "at": 3.4,
+            "dist": 95
+          },
+          {
+            "at": 4.6,
+            "dist": 95
+          },
+          {
+            "at": 5.8,
+            "dist": 95
+          }
+        ],
+        "genMs": 52.34,
+        "polygons": 40,
+        "start": [
+          665,
+          55
+        ],
+        "goal": [
+          145,
+          515
+        ],
+        "dropResults": [
+          {
+            "ok": false,
+            "reason": "would overlap the agent",
+            "workMs": 145.37,
+            "slices": 24,
+            "frames": 24,
+            "atT": 1.4
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 279.28,
+            "slices": 25,
+            "frames": 25,
+            "atT": 2.617
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 68.46,
+            "slices": 7,
+            "frames": 7,
+            "atT": 3.517
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 127.68,
+            "slices": 12,
+            "frames": 12,
+            "atT": 4.8
+          },
+          {
+            "ok": true,
+            "sealed": false,
+            "workMs": 112.49,
+            "slices": 14,
+            "frames": 14,
+            "atT": 6.033
+          }
+        ],
+        "transitions": [
+          {
+            "t": 0,
+            "from": "IDLE",
+            "to": "PLANNING",
+            "reason": "start requested"
+          },
+          {
+            "t": 0.03,
+            "from": "PLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1714 nodes in 2 slices"
+          },
+          {
+            "t": 2.62,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 2.67,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1613 nodes in 2 slices"
+          },
+          {
+            "t": 3.52,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 3.53,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on coarse grid: 1223 nodes in 2 slices"
+          },
+          {
+            "t": 4.8,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: path blocked"
+          },
+          {
+            "t": 4.83,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 5.9,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 42828 nodes in 60 slices"
+          },
+          {
+            "t": 6.03,
+            "from": "FOLLOWING",
+            "to": "REPLANNING",
+            "reason": "world changed: replanning"
+          },
+          {
+            "t": 6.07,
+            "from": "REPLANNING",
+            "to": "REPLANNING",
+            "reason": "coarse grid found no route, retrying on fine grid"
+          },
+          {
+            "t": 7.1,
+            "from": "REPLANNING",
+            "to": "FOLLOWING",
+            "reason": "path found on fine grid: 42408 nodes in 58 slices"
+          },
+          {
+            "t": 15.32,
+            "from": "FOLLOWING",
+            "to": "ARRIVED",
+            "reason": "reached B after 15.3 s"
+          }
+        ],
+        "paths": [
+          {
+            "tier": 0,
+            "nodes": 1714,
+            "slices": 2,
+            "planMs": 9.74,
+            "points": 10
+          },
+          {
+            "tier": 0,
+            "nodes": 1613,
+            "slices": 2,
+            "planMs": 8.91,
+            "points": 8
+          },
+          {
+            "tier": 0,
+            "nodes": 1223,
+            "slices": 2,
+            "planMs": 6.7,
+            "points": 9
+          },
+          {
+            "tier": 1,
+            "nodes": 42828,
+            "slices": 60,
+            "planMs": 358.48,
+            "points": 47
+          },
+          {
+            "tier": 1,
+            "nodes": 42408,
+            "slices": 58,
+            "planMs": 351.29,
+            "points": 47
+          }
+        ],
+        "summary": {
+          "k": "done",
+          "state": "ARRIVED",
+          "t": 15.32,
+          "frames": 919,
+          "overBudget": 0,
+          "worstFrame": 12.327,
+          "avgFrame": 2.959,
+          "worstPlan": 10.403,
+          "worstTick": 1.699,
+          "replans": 4,
+          "recov": 0,
+          "coll": 10,
+          "heap": {
+            "intFree": 244951,
+            "intMin": 229695,
+            "psramFree": 2359056,
+            "psramMin": 2359056,
+            "psramTotal": 8388608
+          }
+        }
+      }
+    ],
+    "realtimeSummary": {
+      "missions": 16,
+      "arrived": 16,
+      "frames": 10065,
+      "framesOverBudget": 0,
+      "frameMs": {
+        "all": {
+          "n": 10065,
+          "median": 0.705,
+          "p90": 7.943,
+          "p99": 12.044,
+          "max": 14.834,
+          "mean": 2.303
+        },
+        "static": {
+          "n": 1921,
+          "median": 0.625,
+          "p90": 8.347,
+          "p99": 10.05,
+          "max": 11.236,
+          "mean": 2.159
+        },
+        "withDrops": {
+          "n": 8144,
+          "median": 0.729,
+          "p90": 7.839,
+          "p99": 12.14,
+          "max": 14.834,
+          "mean": 2.337
+        }
+      },
+      "drops": {
+        "sent": 54,
+        "accepted": 32,
+        "rejected": 22,
+        "rejectReasons": [
+          {
+            "reason": "would overlap the agent",
+            "n": 22
+          }
+        ],
+        "validationFrames": {
+          "n": 32,
+          "median": 5,
+          "p90": 14,
+          "p99": 54,
+          "max": 54,
+          "mean": 8.25
+        },
+        "validationWorkMs": {
+          "n": 32,
+          "median": 54.25,
+          "p90": 127.68,
+          "p99": 402.98,
+          "max": 402.98,
+          "mean": 76.823
+        }
+      },
+      "contactPushes": 249,
+      "replans": 32,
+      "psramPeakMB": 5.75,
+      "internalFreeMinKB": 224
+    }
+  },
+  "operations": [
+    {
+      "key": "generate",
+      "title": "Generate arena + coarse grid",
+      "js": 4.0498,
+      "cpp": 0.3098,
+      "hostFloat": 0.259,
+      "esp32": 54.237
+    },
+    {
+      "key": "fineBuild",
+      "title": "Fine grid full build (480×320)",
+      "js": 80.369,
+      "cpp": 3.7108,
+      "hostFloat": 2.2471,
+      "esp32": 885.665
+    },
+    {
+      "key": "drop",
+      "title": "Obstacle drop + validation",
+      "js": 5.4347,
+      "cpp": 0.3362,
+      "hostFloat": 0.3016,
+      "esp32": 50.923
+    },
+    {
+      "key": "coarseAstar",
+      "title": "Coarse A* incl. seeding",
+      "js": 0.9375,
+      "cpp": 0.0875,
+      "hostFloat": 0.0923,
+      "esp32": 7.319
+    },
+    {
+      "key": "fineAstar",
+      "title": "Fine A* incl. seeding",
+      "js": 20.9442,
+      "cpp": 2.0607,
+      "hostFloat": 1.9267,
+      "esp32": 192.186
+    }
+  ]
+}

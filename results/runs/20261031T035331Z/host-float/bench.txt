@@ -1,0 +1,11 @@
+== operations (60 worlds, density 36)
+generate (coarse grid)             median    0.2590 ms   p99    0.8013 ms   max    0.8013 ms   (n=60)
+fine grid full build               median    2.2471 ms   p99    7.4800 ms   max    7.4800 ms   (n=60)
+addObstacle + validation           median    0.3016 ms   p99    1.0078 ms   max    1.1024 ms   (n=300)
+coarse A* incl. seeding (unsliced) median    0.0923 ms   p99    0.2143 ms   max    0.2143 ms   (n=60)
+fine A* incl. seeding (unsliced)   median    1.9267 ms   p99    5.7973 ms   max    5.7973 ms   (n=60)
+== per-frame cost with app-like 2 ms slices: plan or build slice + tick (100 missions each)
+static d=36                        median    0.0003 ms   p99    0.0022 ms   max    2.0123 ms   (n=43841)
+                                   157693 simulated frames per wall-clock second
+16 random drops d=40               median    0.0007 ms   p99    0.3439 ms   max    4.0078 ms   (n=75307)
+                                   54200 simulated frames per wall-clock second

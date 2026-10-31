@@ -1,0 +1,61 @@
+{
+  "k": "bench",
+  "rows": [
+    {
+      "label": "generate + coarse grid",
+      "median": 54.237,
+      "p90": 113.476,
+      "max": 119.962,
+      "n": 20
+    },
+    {
+      "label": "fine grid full build",
+      "median": 885.665,
+      "p90": 956.917,
+      "max": 1006.058,
+      "n": 20
+    },
+    {
+      "label": "drop validation (all slices)",
+      "median": 50.923,
+      "p90": 71.259,
+      "max": 213.109,
+      "n": 100
+    },
+    {
+      "label": "coarse A* (unsliced)",
+      "median": 7.319,
+      "p90": 15.734,
+      "max": 17.013,
+      "n": 20
+    },
+    {
+      "label": "fine A* (unsliced)",
+      "median": 192.186,
+      "p90": 391.971,
+      "max": 407.941,
+      "n": 20
+    },
+    {
+      "label": "fine seedCells (start + goal)",
+      "median": 14.614,
+      "p90": 31.282,
+      "max": 34.848,
+      "n": 20
+    },
+    {
+      "label": "smooth fine path",
+      "median": 2.219,
+      "p90": 4.85,
+      "max": 4.908,
+      "n": 20
+    }
+  ],
+  "heap": {
+    "intFree": 337875,
+    "intMin": 265099,
+    "psramFree": 8331068,
+    "psramMin": 5652260,
+    "psramTotal": 8388608
+  }
+}

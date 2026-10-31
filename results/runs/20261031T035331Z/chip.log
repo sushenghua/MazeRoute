@@ -1,0 +1,32 @@
+[16:53:32] chip: ESP32-S3 rev 2, 240 MHz, float, ESP-IDF v5.5.3-dirty
+[16:53:32] chip: bench 20
+[16:54:01] chip: profile 20
+[16:54:45] chip: static-201: ARRIVED 8.57s, frames over 16.7 ms 0/514, worst 10.098 ms, drops 0 ok / 0 rejected
+[16:54:55] chip: static-202: ARRIVED 8.43s, frames over 16.7 ms 0/506, worst 11.236 ms, drops 0 ok / 0 rejected
+[16:55:04] chip: static-203: ARRIVED 7.97s, frames over 16.7 ms 0/478, worst 10.696 ms, drops 0 ok / 0 rejected
+[16:55:12] chip: static-204: ARRIVED 7.05s, frames over 16.7 ms 0/423, worst 10.709 ms, drops 0 ok / 0 rejected
+[16:55:22] chip: drops-101: ARRIVED 9.68s, frames over 16.7 ms 0/581, worst 12.264 ms, drops 2 ok / 3 rejected
+[16:55:32] chip: drops-102: ARRIVED 8.88s, frames over 16.7 ms 0/533, worst 13.046 ms, drops 3 ok / 1 rejected
+[16:55:40] chip: drops-103: ARRIVED 7.15s, frames over 16.7 ms 0/429, worst 12.557 ms, drops 4 ok / 0 rejected
+[16:55:50] chip: drops-104: ARRIVED 8.73s, frames over 16.7 ms 0/524, worst 12.292 ms, drops 0 ok / 4 rejected
+[16:56:12] chip: drops-105: ARRIVED 20.82s, frames over 16.7 ms 0/1249, worst 14.834 ms, drops 4 ok / 1 rejected
+[16:56:22] chip: drops-106: ARRIVED 9.08s, frames over 16.7 ms 0/545, worst 12.165 ms, drops 3 ok / 0 rejected
+[16:56:33] chip: drops-107: ARRIVED 10.07s, frames over 16.7 ms 0/604, worst 12.712 ms, drops 1 ok / 4 rejected
+[16:56:48] chip: drops-108: ARRIVED 14.27s, frames over 16.7 ms 0/856, worst 12.981 ms, drops 2 ok / 3 rejected
+[16:56:59] chip: drops-109: ARRIVED 10.1s, frames over 16.7 ms 0/606, worst 12.601 ms, drops 5 ok / 0 rejected
+[16:57:12] chip: drops-110: ARRIVED 11.2s, frames over 16.7 ms 0/672, worst 12.169 ms, drops 2 ok / 2 rejected
+[16:57:23] chip: drops-111: ARRIVED 10.43s, frames over 16.7 ms 0/626, worst 12.357 ms, drops 2 ok / 3 rejected
+[16:57:39] chip: drops-112: ARRIVED 15.32s, frames over 16.7 ms 0/919, worst 12.327 ms, drops 4 ok / 1 rejected
+[16:57:40] chip: suite 30 1 6
+[16:57:53] chip:   static d=12: 30/30 arrived, 0 honest FAILED, 0 fail
+[16:58:14] chip:   static d=22: 30/30 arrived, 0 honest FAILED, 0 fail
+[16:58:45] chip:   static d=36: 30/30 arrived, 0 honest FAILED, 0 fail
+[16:59:19] chip:   static d=40: 30/30 arrived, 0 honest FAILED, 0 fail
+[16:59:55] chip:   4 drops @95px d=36: 30/30 arrived, 0 honest FAILED, 0 fail
+[17:00:29] chip:   4 drops @45px d=36: 30/30 arrived, 0 honest FAILED, 0 fail
+[17:01:15] chip:   8 random drops d=30: 30/30 arrived, 0 honest FAILED, 0 fail
+[17:02:51] chip:   16 random drops d=40: 30/30 arrived, 0 honest FAILED, 0 fail
+[17:03:26] chip:   SEAL 4 drops @45px d=36: 30/30 arrived, 0 honest FAILED, 0 fail
+[17:05:33] chip:   SEAL 16 random d=40: 24/30 arrived, 6 honest FAILED, 0 fail
+[17:05:33] chip: suite: 300 missions, 0 failures, 472.6 s
+[17:05:33] chip: chip done

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Steering Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Agent steering through irregular obstacles</h1>
+    <p>Time-sliced A* · polygon collision · watchdog state machine · fixed 16.7 ms frame budget</p>
+    <span id="seed"></span>
+  </header>
+  <main>
+    <section>
+      <div class="arena-wrap"><canvas id="arena" width="960" height="640"></canvas><div id="toast" role="status"></div></div>
+      <div class="hint">Click inside the arena while the agent is moving to drop a new obstacle in its way and watch it re-plan. Drops that would overlap the agent or cover B are rejected; drops that seal B off are rejected unless you allow them. Red tint = nav cells blocked for the agent's radius; blue = A* closed set; yellow = open set.</div>
+    </section>
+    <aside>
+      <div class="card">
+        <div class="controls">
+          <button id="btn-generate">Generate</button>
+          <button id="btn-start" class="primary" disabled>Start</button>
+          <button id="btn-reset">Reset</button>
+        </div>
+        <label class="slider">Obstacle density <input id="density" type="range" min="8" max="40" value="22"><b id="density-val">22</b></label>
+        <label class="slider">Sim speed <input id="speed" type="range" min="0.25" max="3" step="0.25" value="1"><b id="speed-val">1.0×</b></label>
+        <label class="slider">Planner cap / frame <input id="plan-cap" type="range" min="0.25" max="8" step="0.25" value="1"><b id="plan-cap-val">1.00 ms</b></label>
+        <label class="setting"><input id="allow-sealing" type="checkbox"> Allow drops that seal off B <span>(the agent should then report FAILED)</span></label>
+        <div class="toggles">
+          <label><input id="show-grid" type="checkbox"> nav grid</label>
+          <label><input id="show-search" type="checkbox" checked> A* search</label>
+          <label><input id="show-whiskers" type="checkbox" checked> whiskers</label>
+          <label><input id="show-raw" type="checkbox"> raw path</label>
+        </div>
+      </div>
+      <div class="card">
+        <h2>State machine <span id="state-badge">IDLE</span></h2>
+        <div id="stats"></div>
+      </div>
+      <div class="card">
+        <h2>Frame budget (last 150 frames)</h2>
+        <canvas id="budget" width="340" height="80"></canvas>
+        <div class="legend"><span><i style="background:#4fd1c5"></i>sim</span><span><i style="background:#f6c453"></i>plan</span><span><i style="background:#a78bfa"></i>render</span><span><i style="background:#ef4444"></i>budget</span></div>
+      </div>
+      <div class="card">
+        <h2>Transitions</h2>
+        <ul id="log"></ul>
+      </div>
+    </aside>
+  </main>
+  <script src="js/geometry.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/pathfinder.js"></script>
+  <script src="js/steering.js"></script>
+  <script src="js/scheduler.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
