@@ -9,14 +9,9 @@
 - **C++23 port**: the same simulation core, 10 to 20 times faster, matched against the JavaScript run for run.
 - **ESP32-S3 port**: single-precision core running live on the chip, drawn in a web page over USB.
 
-<p align="center">
-  <a href="media/maze_route.mp4"><img src="media/poster.jpg" alt="The ESP32-S3 live view: the agent has reached B after re-planning around a dropped obstacle; panels show the state machine, per-frame chip cost under the 16.7 ms line, an on-chip benchmark and an on-chip test suite" width="820"></a>
+<p align="center"><em>▶ Demo (1:33): missions computed on the ESP32-S3, with obstacles dropped mid-run</em></p>
 
-  <br><em>▶ <a href="media/maze_route.mp4">Demo video (1:33)</a>: missions computed on the ESP32-S3, with obstacles dropped mid-run</em>
-  
 https://github.com/user-attachments/assets/13b5e11d-4e93-4f7c-8a45-1285ab4c6e87
-  
-</p>
 
 ## Try it
 
